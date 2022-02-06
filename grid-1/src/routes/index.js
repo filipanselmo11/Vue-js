@@ -10,5 +10,6 @@ export default new Router({
         { path: '/', name: 'home', component: Home },
         { path: '/about', name: 'about', component: () => import('../views/About.vue') },
         { path: '/grid', name: 'grid', component: () => import('../views/Grid.vue') },
+        { path: '/grid2', name: 'grid2', component: () => import('../views/Grid2.vue') },
     ]
 });
