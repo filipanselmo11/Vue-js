@@ -1,19 +1,21 @@
 <template>
   <v-app>
     <v-main>
-      <Slider />
+      <hello-world />
+      <slider-1/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Slider from "@/components/Slider";
-
+import HelloWorld from "@/components/HelloWorld";
+import Slider1 from './components/Slider1.vue';
 export default {
   name: "App",
 
   components: {
-    Slider,
+    HelloWorld,
+    Slider1
   },
 
   data: () => ({
