@@ -1,56 +1,57 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+    <v-app-bar color="deep-purple accent-4" dense dark>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-toolbar-title>Slider App</v-toolbar-title>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <slider-17 />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Slider17 from './components/Slider17.vue';
+//import Slider16 from './components/Slider16.vue';
+//import Slider15 from './components/Slider15.vue';
+//import Slider14 from './components/Slider14.vue';
+//import Slider13 from './components/Slider13.vue';
+//import Slider12 from './components/Slider12.vue';
+//import Slider11 from './components/Slider11.vue';
+//import Slider10 from './components/Slider10.vue';
+//import Slider9 from './components/Slider9.vue';
+//import Slider8 from './components/Slider8.vue';
+//import Slider7 from './components/Slider7.vue';
+//import Slider6 from './components/Slider6.vue';
+//import Slider5 from './components/Slider5.vue';
+//import Slider3 from './components/Slider3.vue';
+//import Slider2 from './components/Slider2.vue';
+//import Slider4 from "./components/Slider4.vue";
+//import Slider1 from "./components/Slider1.vue";
+//import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    HelloWorld,
+    Slider17
+    //Slider16
+    //Slider15
+    //Slider14
+    //Slider13
+    //Slider12
+    //Slider11
+    //Slider10
+    //Slider9
+    //Slider8
+    //Slider7
+    //Slider6
+    //Slider3
+    //Slider2,
+    //Slider4
+    //Slider5,
+    //Slider1,
+    //HelloWorld,
   },
 
   data: () => ({
