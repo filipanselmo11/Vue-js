@@ -5,13 +5,14 @@
       <v-toolbar-title>Slider App</v-toolbar-title>
     </v-app-bar>
     <v-main>
-      <slider-17 />
+      <image-component/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Slider17 from './components/Slider17.vue';
+import ImageComponent from './components/ImageComponent.vue';
+//import Slider17 from './components/Slider17.vue';
 //import Slider16 from './components/Slider16.vue';
 //import Slider15 from './components/Slider15.vue';
 //import Slider14 from './components/Slider14.vue';
@@ -34,7 +35,8 @@ export default {
   name: "App",
 
   components: {
-    Slider17
+    ImageComponent
+    //Slider17
     //Slider16
     //Slider15
     //Slider14
