@@ -40,14 +40,16 @@
     <br/>
 
     <v-main>
-      <toolbar-loader/>
+      <slot-component/>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import SlotComponent from './components/SlotComponent.vue';
+
 //import Progress6 from './components/ReversedBar.vue';
-import ToolbarLoader from './components/ToolbarLoader.vue';
+//import ToolbarLoader from './components/ToolbarLoader.vue';
 //import Progress5 from './components/Progress5.vue';
 //import Progress4 from './components/Progress4.vue';
 //import Progress3 from './components/Progress3.vue';
@@ -60,8 +62,9 @@ export default {
   name: 'App',
 
   components: {
+    SlotComponent
     //Progress6,
-    ToolbarLoader
+    //ToolbarLoader,
     //Progress5
     //Progress4
     //Progress3
