@@ -40,13 +40,14 @@
     <br/>
 
     <v-main>
-      <progress-5/>
+      <progress-6/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Progress5 from './components/Progress5.vue';
+import Progress6 from './components/Progress6.vue';
+//import Progress5 from './components/Progress5.vue';
 //import Progress4 from './components/Progress4.vue';
 //import Progress3 from './components/Progress3.vue';
 //import Progress2 from './components/Progress2.vue';
@@ -58,7 +59,8 @@ export default {
   name: 'App',
 
   components: {
-    Progress5
+    Progress6
+    //Progress5
     //Progress4
     //Progress3
     //Progress2
