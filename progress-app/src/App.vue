@@ -37,20 +37,24 @@
       </v-btn>
     </v-app-bar>
 
+    <br/>
+
     <v-main>
-      <HelloWorld/>
+      <progress-1/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Progress1 from './components/Progress1.vue';
+//import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Progress1
+    //HelloWorld,
   },
 
   data: () => ({
