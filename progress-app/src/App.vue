@@ -40,13 +40,14 @@
     <br/>
 
     <v-main>
-      <progress-6/>
+      <toolbar-loader/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Progress6 from './components/Progress6.vue';
+//import Progress6 from './components/ReversedBar.vue';
+import ToolbarLoader from './components/ToolbarLoader.vue';
 //import Progress5 from './components/Progress5.vue';
 //import Progress4 from './components/Progress4.vue';
 //import Progress3 from './components/Progress3.vue';
@@ -59,7 +60,8 @@ export default {
   name: 'App',
 
   components: {
-    Progress6
+    //Progress6,
+    ToolbarLoader
     //Progress5
     //Progress4
     //Progress3
