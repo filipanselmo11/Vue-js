@@ -40,20 +40,23 @@
     <br/>
 
     <v-main>
-      <progress-1/>
+      <progress-2/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Progress1 from './components/Progress1.vue';
+import Progress2 from './components/Progress2.vue';
+
+//import Progress1 from './components/Progress1.vue';
 //import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    Progress1
+    Progress2
+    //Progress1
     //HelloWorld,
   },
 
