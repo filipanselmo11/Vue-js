@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Progress1",
+  name: "IndeterminateDeterminate",
   data: () => ({
     value: 0,
     query: false,

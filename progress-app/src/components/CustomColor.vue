@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "Progress2",
+  name: "CustomColor",
   data: () => ({}),
 };
 </script>
