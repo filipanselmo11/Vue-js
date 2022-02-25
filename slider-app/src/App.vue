@@ -1,17 +1,17 @@
 <template>
   <v-app>
-    <v-app-bar color="deep-purple accent-4" dense dark>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-toolbar-title>Slider App</v-toolbar-title>
-    </v-app-bar>
     <v-main>
-      <image-component/>
+      <append-and-prepend/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import ImageComponent from './components/ImageComponent.vue';
+import AppendAndPrepend from './components/AppendAndPrepend.vue';
+//import CustomImageSlider from './components/CustomImageSlider.vue'
+//import AppendComponent from './components/AppendComponent.vue';
+//import ImageComponent from './components/ImageComponent.vue';
+//import InverseSliderLabel from './components/InverseSliderLabel.vue';
 //import Slider17 from './components/Slider17.vue';
 //import Slider16 from './components/Slider16.vue';
 //import Slider15 from './components/Slider15.vue';
@@ -35,7 +35,11 @@ export default {
   name: "App",
 
   components: {
-    ImageComponent
+    //CustomImageSlider,
+    AppendAndPrepend,
+    //AppendComponent
+    //ImageComponen,
+    //InverseSliderLabel
     //Slider17
     //Slider16
     //Slider15
