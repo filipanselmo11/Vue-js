@@ -8,8 +8,6 @@
     <!--<p>{{ arr[0][2] }}</p>
     <p>{{ arr[2][0] }}</p>-->
 
-    
-
     <h1>Olá 2</h1>
     <p>{{ Arr }}</p>
     <p>{{ Arr[0] }}</p>
@@ -27,6 +25,16 @@
     <p>{{ Arr[1].Músicas[0] }}</p>
     <p>{{ Arr[1].Músicas[1] }}</p>
     <p>{{ Arr[1].Músicas[2] }}</p>
+
+    <h1>Olá 4</h1>
+    <p>{{ newArr }}</p>
+    <p>{{ newArr[0] }}</p>
+    <p>{{ newArr[0].Tecnologias }}</p>
+    <p>{{ newArr[0].Tecnologias[0] }}</p>
+    <p>{{ newArr[0].Tecnologias[0].Tec1 }}</p>
+    <p>{{ newArr[0].Tecnologias[0].Tec1[0] }}</p>
+    <p>{{ newArr[0].Tecnologias[0].Tec1[1] }}</p>
+    <p>{{ newArr[0].Tecnologias[0].Tec1[2] }}</p>
   </div>
 </template>
 
@@ -48,6 +56,22 @@ export default {
         Artista: "Slipknot",
         Album: "Vol 3: The Subliminal Verses",
         Músicas: ["Before I Forget", "Duality", "Vermilion pt 1"],
+      },
+    ],
+
+    newArr: [
+      {
+        nome: "Dev-1",
+        indexDev1: 0,
+        Tecnologias:[
+          {Tec1: ["VueJS", "Angular", "NodeJs"]},
+          {Tec2: ["Svelte", "Go", "Python"]},
+        ]
+      },
+      {
+        nome: "Dev-2",
+        indexDev1: 1,
+        Tecnologias: [["Spring Boot", "React", "Flutter"]],
       },
     ],
   }),
