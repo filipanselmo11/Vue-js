@@ -1,7 +1,12 @@
 <template>
   <div>
     <h1>Button Content</h1>
-    <p>{{ buttonContent[0].image1[3] }}</p>
+    <p>{{ buttonContent[0].image1[1] }}</p>
+    <tbody v-for="(button, index) in buttonContent" :key="index.item">
+      <td v-for="(item, index) in button.image1" :key="index">
+        {{ item }}
+      </td>
+    </tbody>
   </div>
 </template>
 
