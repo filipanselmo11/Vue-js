@@ -64,6 +64,7 @@
             </v-icon>
           </v-btn>
           <v-slider
+            v-if="buttonContent[buttonSelected].text === 'Botao-1'"
             color="secondary lighten-1"
             v-model="currentTimeAtSlider"
             hide-details
@@ -74,25 +75,32 @@
           >
             <template v-slot:prepend>
               <span class="ml-1 mt-1">
-                {{ buttonContent[endButtonContent].image1.text }}
+                {{ buttonContent[endButtonContent].image1 }}
               </span>
             </template>
-            <template v-slot:thumb-label="{ value }">
+            <!--<template v-slot:thumb-label="{ value }">
               <v-chip label color="secondary lighten-1">
                 <strong>
                   {{
-                    buttonContent[inverseButtonContentIndex(value)]
+                    buttonContent[inverseButtonContentIndex(value)].image1[inverseButtonContentIndex(value)].text
                   }}
                 </strong>
               </v-chip>
-            </template>
-            <template v-slot:append>
+            </template>-->
+            <!--<template v-slot:append>
               <span class="mt-1">
                 {{
-                  buttonContent[startButtonContent].image1[startButtonContent]
+                  buttonContent[startButtonContent].image1[startButtonContent].text
                 }}
               </span>
-            </template>
+            </template>-->
+          </v-slider>
+          <v-slider
+            v-else-if="buttonContent[buttonSelected].text === 'Botao-2'">
+          </v-slider>
+          <v-slider v-else-if="buttonContent[buttonSelected].text === 'Botao-3'"></v-slider>
+          <v-slider v-else>
+            
           </v-slider>
         </v-card>
       </v-col>
