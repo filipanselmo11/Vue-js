@@ -96,11 +96,52 @@
             </template>-->
           </v-slider>
           <v-slider
-            v-else-if="buttonContent[buttonSelected].text === 'Botao-2'">
+            v-else-if="buttonContent[buttonSelected].text === 'Botao-2'"
+            color="secondary lighten-1"
+            v-model="currentTimeAtSlider"
+            hide-details
+            min="0"
+            :max="endButtonContent"
+            step="1"
+            :thumb-label="playing ? 'always' : ''"
+          >
+            <template v-slot:prepend>
+              <span class="ml-1 mt-1">
+                {{ buttonContent[endButtonContent].image2 }}
+              </span>
+            </template>
           </v-slider>
-          <v-slider v-else-if="buttonContent[buttonSelected].text === 'Botao-3'"></v-slider>
-          <v-slider v-else>
-            
+          <v-slider
+            v-else-if="buttonContent[buttonSelected].text === 'Botao-3'"
+            color="secondary lighten-1"
+            v-model="currentTimeAtSlider"
+            hide-details
+            min="0"
+            :max="endButtonContent"
+            step="1"
+            :thumb-label="playing ? 'always' : ''"
+          >
+            <template v-slot:prepend>
+              <span class="ml-1 mt-1">
+                {{ buttonContent[endButtonContent].image3[1] }}
+              </span>
+            </template>
+          </v-slider>
+          <v-slider
+            v-else
+            color="secondary lighten-1"
+            v-model="currentTimeAtSlider"
+            hide-details
+            min="0"
+            :max="endButtonContent"
+            step="1"
+            :thumb-label="playing ? 'always' : ''"
+          >
+            <template v-slot:prepend>
+              <span class="ml-1 mt-1">
+                {{ buttonContent[endButtonContent].image1 }}
+              </span>
+            </template>
           </v-slider>
         </v-card>
       </v-col>
@@ -121,68 +162,28 @@ export default {
       {
         text: "Botao-1",
         image1: [
-          {
-            text: "Imagem-1",
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-thumb.jpg",
-          },
-          {
-            text: "Imagem-2",
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-thumb.jpg",
-          },
-          {
-            text: "Imagem-3",
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg",
-          },
-          {
-            text: "Imagem-4",
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg",
-          },
+          "https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg",
         ],
       },
       {
         text: "Botao-2",
         image2: [
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/133/969/139/artwork-nature-landscape-fantasy-art-wallpaper-thumb.jpg",
-          },
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/297/22/531/lake-blue-moonlight-moon-wallpaper-thumb.jpg",
-          },
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-thumb.jpg",
-          },
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/214/442/543/digital-art-son-goku-dragon-ball-dragon-ball-z-island-hd-wallpaper-thumb.jpg",
-          },
+          "https://c4.wallpaperflare.com/wallpaper/133/969/139/artwork-nature-landscape-fantasy-art-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/297/22/531/lake-blue-moonlight-moon-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/214/442/543/digital-art-son-goku-dragon-ball-dragon-ball-z-island-hd-wallpaper-thumb.jpg",
         ],
       },
       {
         text: "Botao-3",
         image3: [
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/914/746/419/abstract-digital-art-minimalism-simple-background-wallpaper-thumb.jpg",
-          },
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/642/695/642/anime-demon-slayer-kimetsu-no-yaiba-giyuu-tomioka-hd-wallpaper-thumb.jpg",
-          },
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/975/421/110/windows-10-black-4k-8k-wallpaper-thumb.jpg",
-          },
-          {
-            image:
-              "https://c4.wallpaperflare.com/wallpaper/116/412/889/naruto-anime-uchiha-itachi-hd-wallpaper-thumb.jpg",
-          },
+          "https://c4.wallpaperflare.com/wallpaper/914/746/419/abstract-digital-art-minimalism-simple-background-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/642/695/642/anime-demon-slayer-kimetsu-no-yaiba-giyuu-tomioka-hd-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/975/421/110/windows-10-black-4k-8k-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/116/412/889/naruto-anime-uchiha-itachi-hd-wallpaper-thumb.jpg",
         ],
       },
     ],
