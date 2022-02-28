@@ -30,26 +30,26 @@
               v-if="buttonContent[buttonSelected].text === 'Botao-1'"
               max-height="600"
               max-width="890"
-              :src="buttonContent[buttonSelected].image1[buttonSelected].image"
+              :src="buttonContent[buttonSelected].image1[0].image"
             />
             <v-img
               v-else-if="buttonContent[buttonSelected].text === 'Botao-2'"
               max-height="600"
               max-width="890"
-              :src="buttonContent[buttonSelected].image2[buttonSelected].image"
+              :src="buttonContent[buttonSelected].image2[0].image"
             />
 
             <v-img
               v-else-if="buttonContent[buttonSelected].text === 'Botao-3'"
               max-height="600"
               max-width="890"
-              :src="buttonContent[buttonSelected].image3[buttonSelected].image"
+              :src="buttonContent[buttonSelected].image3[0].image"
             />
             <v-img
               v-else
               max-height="600"
               max-width="890"
-              :src="buttonContent[buttonSelected].image1[buttonSelected].image"
+              :src="buttonContent[buttonSelected].image1[0].image"
             />
           </v-card-text>
 
@@ -63,7 +63,7 @@
               }}
             </v-icon>
           </v-btn>
-          <v-slider
+          <!--<v-slider
             v-if="buttonContent[buttonSelected].text === 'Botao-1'"
             color="secondary lighten-1"
             v-model="currentTimeAtSlider"
@@ -78,7 +78,7 @@
                 {{ buttonContent[endButtonContent].image1 }}
               </span>
             </template>
-            <!--<template v-slot:thumb-label="{ value }">
+            <template v-slot:thumb-label="{ value }">
               <v-chip label color="secondary lighten-1">
                 <strong>
                   {{
@@ -86,14 +86,14 @@
                   }}
                 </strong>
               </v-chip>
-            </template>-->
-            <!--<template v-slot:append>
+            </template>
+            <template v-slot:append>
               <span class="mt-1">
                 {{
                   buttonContent[startButtonContent].image1[startButtonContent].text
                 }}
               </span>
-            </template>-->
+            </template>
           </v-slider>
           <v-slider
             v-else-if="buttonContent[buttonSelected].text === 'Botao-2'"
@@ -142,7 +142,7 @@
                 {{ buttonContent[endButtonContent].image1 }}
               </span>
             </template>
-          </v-slider>
+          </v-slider>-->
         </v-card>
       </v-col>
     </v-row>
@@ -162,28 +162,25 @@ export default {
       {
         text: "Botao-1",
         image1: [
-          "https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg",
+          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80",
+          "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+          "https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=896&q=80",
         ],
       },
       {
         text: "Botao-2",
         image2: [
-          "https://c4.wallpaperflare.com/wallpaper/133/969/139/artwork-nature-landscape-fantasy-art-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/297/22/531/lake-blue-moonlight-moon-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/214/442/543/digital-art-son-goku-dragon-ball-dragon-ball-z-island-hd-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/163/392/912/map-wold-map-technology-world-wallpaper-preview.jpg",
+          "https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80",
+          "https://images.unsplash.com/photo-1638291792853-5ab967de3611?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
         ],
       },
       {
         text: "Botao-3",
         image3: [
-          "https://c4.wallpaperflare.com/wallpaper/914/746/419/abstract-digital-art-minimalism-simple-background-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/642/695/642/anime-demon-slayer-kimetsu-no-yaiba-giyuu-tomioka-hd-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/975/421/110/windows-10-black-4k-8k-wallpaper-thumb.jpg",
-          "https://c4.wallpaperflare.com/wallpaper/116/412/889/naruto-anime-uchiha-itachi-hd-wallpaper-thumb.jpg",
+          "https://c4.wallpaperflare.com/wallpaper/551/801/266/map-world-map-wallpaper-preview.jpg",
+          "https://images.unsplash.com/photo-1594492691731-3d7974140624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
+          "https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
         ],
       },
     ],
