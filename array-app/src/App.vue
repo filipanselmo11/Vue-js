@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-   <lista-component-3/>
+   <lista-component-4/>
   </div>
 </template>
 
 <script>
-import ListaComponent3 from './components/ListaComponent3.vue'
+import ListaComponent4 from './components/ListaComponent4.vue'
+//import ListaComponent3 from './components/ListaComponent3.vue'
 //import ListaComponent2 from './components/ListaComponent2.vue'
 //import ListaComponent1 from './components/ListaComponent1.vue'
 
 export default {
   name: 'App',
   components: {
-    ListaComponent3
+    ListaComponent4
+    //ListaComponent3
     //ListaComponent2
     //ListaComponent1
   }
