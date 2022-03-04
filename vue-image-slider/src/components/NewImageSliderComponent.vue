@@ -1,13 +1,14 @@
 <template>
   <v-row>
-    <div id="currentIndex" v-for="index in [currentIndex]" :key="index">
-      <img max-height="600" max-width="890" :src="currentImg" />
+    <div v-for="index in [currentIndex]" :key="index">
+      <v-img max-height="600" max-width="890" :src="currentImg" />
     </div>
     <v-btn icon @click="startSlide">
       <v-icon>
         {{ play ? "mdi-pause-circle-outline" : "mdi-play-circle-outline" }}
       </v-icon>
     </v-btn>
+    <!---->
     <v-slider
       v-model="currentIndex"
       hide-details
@@ -33,7 +34,7 @@ export default {
     currentIndex: undefined,
   }),
 
-  created() {
+  mounted() {
     this.startSlide();
   },
 
