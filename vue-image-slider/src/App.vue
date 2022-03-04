@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -36,22 +32,22 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
-      <slider-component/>
+      <image-component/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import SliderComponent from './components/SliderComponent.vue';
+import ImageComponent from './components/ImageComponent.vue';
+//import ImageSliderComponent from "./components/ImageSliderComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    SliderComponent
-    
+    ImageComponent
+    //ImageSliderComponent,
   },
 
   data: () => ({
