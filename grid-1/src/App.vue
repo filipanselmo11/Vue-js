@@ -1,22 +1,17 @@
 <template>
   <v-app>
     <v-main>
-      <justify-component></justify-component>
-      <br/>
-      <align-component></align-component>
+      <flex-wrap></flex-wrap>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import AlignComponent from './components/AlignComponent.vue';
-import JustifyComponent from './components/JustifyComponent.vue';
+import FlexWrap from './components/FlexWrap.vue';
 
 export default {
-  name: 'App',
-  components: {JustifyComponent, AlignComponent},
-  data: () => ({
-    //
-  }),
+  name: "App",
+  components: {FlexWrap},
+  data: () => ({}),
 };
 </script>
