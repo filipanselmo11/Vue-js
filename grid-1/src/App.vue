@@ -1,18 +1,20 @@
 <template>
   <v-app>
-    <navbar/>
     <v-main>
-      <router-view></router-view>
+      <justify-component></justify-component>
+      <br/>
+      <align-component></align-component>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import AlignComponent from './components/AlignComponent.vue';
+import JustifyComponent from './components/JustifyComponent.vue';
 
 export default {
   name: 'App',
-  components: {Navbar},
+  components: {JustifyComponent, AlignComponent},
   data: () => ({
     //
   }),
