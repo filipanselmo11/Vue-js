@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-slider :images="batman" />
+    <app-slider :images="images" />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import AppSlider from "./AppSlider.vue";
 export default {
   data: () => ({
-    batman: [
+    images: [
       require("../assets/batman-1.jpg"),
       require("../assets/batman-2.jpg"),
       require("../assets/batman-3.jpg"),

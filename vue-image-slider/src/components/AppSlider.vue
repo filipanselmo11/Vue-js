@@ -76,12 +76,19 @@ export default {
       }
       this.goToIndex(nextIndex);
     },
+    prev() {
+      let nextIndex = this.activeIndex - 1;
+      if(!this.images[nextIndex]){
+        nextIndex = this.images.length - 1;
+      }
+    },
     startInterval() {
       const precision = 100;
       const clock = setInterval(() => {
         if (!this.paused) this.time -= precision;
         if (this.time <= 0) this.next();
       }, precision);
+      
 
       this.$once("hook:destroyed", () => clearInterval(clock));
     },

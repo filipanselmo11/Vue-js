@@ -1,22 +1,39 @@
 <template>
   <v-row align="center" justify="center">
     <v-col cols="=12" align="center" align-self="center" min-height="600">
-    <div v-for="index in [currentIndex]" :key="index">
-      <v-img max-height="600" max-width="1200" :src="currentImg">
-      </v-img>
-    </div>
+      <transition name="fade-slide">
+        <div v-for="index in [currentIndex]" :key="index">
+          <v-img
+            max-height="600"
+            max-width="1200"
+            :lazy-src="imageAkaliBorrada[0]"
+            :src="currentImg"
+          >
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="blue lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
+        </div>
+      </transition>
     </v-col>
     <v-col cols="12">
-    <v-slider
-      :prepend-icon="play ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline'"
-      @click:prepend="startSlide"
-      v-model="currentIndex"
-      hide-details
-      min="0"
-      :max="endImg"
-      step="1"
+      <v-slider
+        :prepend-icon="
+          play ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline'
+        "
+        @click:prepend="startSlide"
+        v-model="currentIndex"
+        hide-details
+        min="0"
+        :max="endImg"
+        step="1"
       />
-      </v-col>
+    </v-col>
   </v-row>
 </template>
 
@@ -32,13 +49,15 @@ export default {
     play: false,
     timer: undefined,
     currentIndex: undefined,
-    images:[],
-     imageAkali: [
+    images: [],
+    imagesBorrado: [],
+    imageAkali: [
       require("@/assets/Akali-Ronin-Yoshimitsu.png"),
       require("@/assets/akali-1.jpg"),
       require("@/assets/akali-2.jpg"),
       require("@/assets/akali-3.jpg"),
     ],
+    imageAkaliBorrada: [require("../assets/Akali-Ronin-Borrada.png")],
     imageJujutsu: [
       require("@/assets/jujutsu_kaisen.jpeg"),
       require("@/assets/jujutsu-kaisen-1.jpg"),
@@ -58,15 +77,15 @@ export default {
       require("@/assets/batman-3.jpg"),
     ],
   }),
-  watch:{
-   item(value){
-     if(value){
-       this.play = false
-       this.clearAnimationInterval();
-       this.currentIndex = 0
-       this.verifyItem()
-       } 
-  }
+  watch: {
+    item(value) {
+      if (value) {
+        this.play = false;
+        this.clearAnimationInterval();
+        this.currentIndex = 0;
+        this.verifyItem();
+      }
+    },
   },
   mounted() {
     this.verifyItem();
@@ -80,22 +99,28 @@ export default {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
     },
 
+    currentImgBorrado() {
+      return this.imagesBorrado[
+        Math.abs(this.currentIndex) % this.imagesBorrado.length
+      ];
+    },
+
     endImg() {
       return this.images.length - 1;
     },
   },
 
   methods: {
-    verifyItem(){
-    if(this.item.text === 'Akali'){
-      this.images = [...this.imageAkali]
-    } else if(this.item.text === 'Jujutsu Kaisen'){
-      this.images = [...this.imageJujutsu]
-    } else if(this.item.text === 'Pain'){
-      this.images = [...this.imagePain]
-    } else if(this.item.text === 'Batman'){
-      this.images = [...this.imageBatman]
-    }
+    verifyItem() {
+      if (this.item.text === "Akali") {
+        this.images = [...this.imageAkali];
+      } else if (this.item.text === "Jujutsu Kaisen") {
+        this.images = [...this.imageJujutsu];
+      } else if (this.item.text === "Pain") {
+        this.images = [...this.imagePain];
+      } else if (this.item.text === "Batman") {
+        this.images = [...this.imageBatman];
+      }
     },
     startSlide() {
       this.play = !this.play;
@@ -135,5 +160,19 @@ export default {
 img {
   height: 600px;
   width: 100%;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>
