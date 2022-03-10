@@ -18,7 +18,7 @@ export default {
   }),
 
   computed: {
-    getfullname() {
+     getfullname() {
       return this.firstname + " " + this.lastname;
     },
   },
