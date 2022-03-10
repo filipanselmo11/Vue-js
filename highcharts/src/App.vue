@@ -1,40 +1,45 @@
 <template>
   <div class="container">
     <div class="well">
-      <Filters></Filters>
+      <filter-component></filter-component>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <Countries></Countries>
+        <countries-component></countries-component>
       </div>
       <div class="col-md-6">
-        <!--<Languages></Languages>-->
+        <languages-component></languages-component>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Countries from "./charts/Countries.vue";
-//import Languages from "./charts/Languages.vue";
-import Filters from "./components/Filters.vue";
-import axios from "axios";
+import CountriesComponent from './charts/CountriesComponent.vue';
+import FilterComponent from "./components/FilterComponent.vue";
+import LanguagesComponent from './charts/LanguagesComponent.vue';
+import axios from 'axios';
 
 const http = axios.create();
 
 export default {
+  components: {CountriesComponent, FilterComponent, LanguagesComponent },
   name: "App",
-  components: { Countries, /*Languages*/ Filters },
   mounted() {
-    http
-      .get(
-        "https://raw.githubusercontent.com/filipanselmo11/DadosJSON/master/MOCK_DATA.json"
-      )
-      .then((response) => {
-        this.$store.commit("SET_LIST", response.data);
-      });
-  },
+    http.get(require('./data/MOCK_DATA.json')).then(response => {
+      this.$store.commit('SET_LIST', response.data);
+    });
+  }
 };
 </script>
 
-<style></style>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
