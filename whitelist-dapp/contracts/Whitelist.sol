@@ -9,12 +9,13 @@ contract Whitelist {
     }
 
     modifier onlyOwner() {
-        require(msg.sender == owner, "Proprietário: o chamador não é o proprietário");
+        //require(msg.sender == owner);
+        require(msg.sender == owner, "O chamador nao eh o proprietario");
         _;
     }
 
     modifier isWhitelisted(address _address){//Modificador pra verificar se o endereço consta na lista branca
-        require(whitelistedAddresses[_address], "Você precisa estar na lista de permissões");
+        require(whitelistedAddresses[_address], "Voce precisa estar na lista de permissoes");
         _;
     }
 
@@ -23,6 +24,10 @@ contract Whitelist {
     function addUser(address _addresstoWhitelist) public onlyOwner {// Função para adicionar um novo endereço na lista, mudando seu status pra true
         whitelistedAddresses[_addresstoWhitelist] = true; //true = permitido //false = não permitido  
     }
+
+    function getUsers(address _addr) public view returns (bool){
+        return whitelistedAddresses[_addr];
+   }
 
     function exampleFunction() public view isWhitelisted(msg.sender) returns (bool) {
         return true;
