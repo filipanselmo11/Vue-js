@@ -45,9 +45,10 @@ export default {
     methods: {
         async onSubmit() {
             try {
-                await this.drizzleInstance.contracts.Whitelist.methods.addUser.cacheSend(
+                let x = await this.drizzleInstance.contracts.Whitelist.methods.addUser.cacheSend(
                     this.address
                 );
+                console.log("Address added ", x);
             } catch(error){
                 console.log(error);
             }

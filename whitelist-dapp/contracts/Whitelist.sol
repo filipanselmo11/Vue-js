@@ -25,15 +25,7 @@ contract Whitelist {
         whitelistedAddresses[_addresstoWhitelist] = true; //true = permitido //false = não permitido  
     }
 
-    function getUsers(address _addr) public view returns (bool){
-        return whitelistedAddresses[_addr];
-   }
-
-    function exampleFunction() public view isWhitelisted(msg.sender) returns (bool) {
-        return true;
-    }
-
-    function verifyUser(address _whitelistedAddress) public view returns(bool){//Função que verifica se o endereço consta na lista branca
+    function verifyUser(address _whitelistedAddress) isWhitelisted(msg.sender) public view returns(bool){//Função que verifica se o endereço consta na lista branca
         bool userIsWhitelisted = whitelistedAddresses[_whitelistedAddress];
         return userIsWhitelisted;
     }
