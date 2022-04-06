@@ -13,6 +13,7 @@ export default {
       Highcharts.chart("container", {
         xAxis: {
           type: "datetime",
+          dateTimeLabelFormats: "%H:%M:%S",
         },
         tooltip: {
           xDateFormat: "%Y/%m/%d %H:%M:%S",
