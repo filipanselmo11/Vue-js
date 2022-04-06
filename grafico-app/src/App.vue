@@ -1,9 +1,10 @@
 <template>
-  <chart-component-1></chart-component-1>
+  <chart-component-2></chart-component-2>
 </template>
 
 <script>
-import ChartComponent1 from './components/ChartComponent1.vue';
+import ChartComponent2 from './components/ChartComponent2.vue';
+//import ChartComponent1 from './components/ChartComponent1.vue';
 
 /*eslint-disabled*/
 //import IconChartComponent1 from "./components/IconChartComponent1.vue";
@@ -11,7 +12,7 @@ import ChartComponent1 from './components/ChartComponent1.vue';
 //import MultipleSeries from './components/MultipleSeries.vue';
 //import FNomeComponent from './components/FNomeComponent.vue'
 export default {
-  components: {ChartComponent1},
+  components: {ChartComponent2},
 };
 </script>
 
