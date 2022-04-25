@@ -1,18 +1,20 @@
 <template>
   <div>
-    <component-1></component-1>
-    <br />
+    <new-component></new-component>
   </div>
 </template>
 
 <script>
-import Component1 from "./components/Component-1.vue";
+import NewComponent from './components/NewComponent.vue';
+
+
 
 
 export default {
   name: "App",
   components: {
-    Component1,
+    NewComponent
+
   },
 };
 </script>
