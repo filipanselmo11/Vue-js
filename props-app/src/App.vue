@@ -2,10 +2,13 @@
   <div id="app">
     <test v-bind:artists="artists" />
     <test-2 v-bind:artists="artists" />
+    <!-- <camera-component name="SONY A&RIV" img="alguma-imagem.jpg"></camera-component> -->
+    <camera-component :name="cameraName" :img="cameraImage"></camera-component>
   </div>
 </template>
 
 <script>
+import CameraComponent from './components/CameraComponent.vue';
 import Test from "./components/Test.vue";
 import Test2 from "./components/Test2.vue";
 
@@ -14,6 +17,7 @@ export default {
   components: {
     Test,
     Test2,
+    CameraComponent,
   },
   data: () => ({
     artists: [
