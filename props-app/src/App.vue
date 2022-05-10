@@ -1,48 +1,58 @@
 <template>
   <div id="app">
-    <test v-bind:artists="artists" />
-    <test-2 v-bind:artists="artists" />
-    <!-- <camera-component name="SONY A&RIV" img="alguma-imagem.jpg"></camera-component> -->
-    <camera-component :name="cameraName" :img="cameraImage"></camera-component>
+    <email></email>
   </div>
+  <!-- <div id="app">
+    <app-header :title="title"></app-header>
+    <app-ninjas :ninjas="ninjas"></app-ninjas>
+    <app-footer :title="title"></app-footer>
+  </div> -->
 </template>
 
 <script>
-import CameraComponent from './components/CameraComponent.vue';
-import Test from "./components/Test.vue";
-import Test2 from "./components/Test2.vue";
+import Email from "./components/Email.vue";
+//import Task from "./components/Task.vue";
+// import Header from "./components/Header.vue";
+// import Footer from "./components/Footer.vue";
+// import Ninjas from "./components/Ninjas.vue";
 
 export default {
   name: "App",
   components: {
-    Test,
-    Test2,
-    CameraComponent,
+    Email,
+    // "app-header": Header,
+    // "app-footer": Footer,
+    // "app-ninjas": Ninjas,
   },
   data: () => ({
-    artists: [
-      { name: "Davido", genre: "afrobeats", country: "Nigeria" },
-      { name: "Burna Boy", genre: "afrobeats", country: "Nigeria" },
-      { name: "AKA", genre: "hiphop", country: "South-Africa" },
-      { name: "Sarkodie", genre: "hiphop", country: "Ghana" },
-      { name: "Stormzy", genre: "hiphop", country: "United Kingdom" },
-      { name: "Lil Nas", genre: "Country", country: "United States" },
-      { name: "Nasty C", genre: "hiphop", country: "South-Africa" },
-      { name: "Shatta-walle", genre: "Reagae", country: "Ghana" },
-      { name: "Khalid", genre: "pop", country: "United States" },
-      { name: "Ed Sheeran", genre: "pop", country: "United Kingdom" },
+    ninjas: [
+      { name: "Ryu", speciality: "Vue Components", show: false },
+      { name: "Crystal", speciality: "HTML Wizardy", show: false },
+      { name: "Hitoshi", speciality: "Click Events", show: false },
+      { name: "Tango", speciality: "Conditionals", show: false },
+      { name: "Kami", speciality: "Webpack", show: false },
+      { name: "Yoshi", speciality: "Data Diggin", show: false },
+    ],
+    title: "Vue Ninjas",
+    tasks: [
+      {
+        id: 1,
+        title: "Estudar mais sobre Props",
+        completed: true,
+      },
+      {
+        id: 2,
+        title: "Estudar mais mais sobre Props",
+        completed: true,
+      },
+      {
+        id: 3,
+        title: "Estudar mais mai mais sobre Props",
+        completed: true,
+      },
     ],
   }),
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
