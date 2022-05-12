@@ -21,7 +21,7 @@ export default {
     idade: undefined,
     email: "",
     password: "",
-    arrayData:[],
+    arrayUsers:[],
   }),
 };
 </script>
