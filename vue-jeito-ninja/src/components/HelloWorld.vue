@@ -2,7 +2,8 @@
   <div>
     <h1>{{ titulo }}</h1>
     {{ nome }}
-    {{ fullName }}
+    <menubar></menubar>
+    <!-- {{ fullName }} -->
     <!-- <ul>
       <li v-for="(index, usuario) in usuarios" :key="index">
         {{ usuario.nome | toUpperCase() }}
@@ -65,8 +66,36 @@
 </template>
 
 <script>
+import MenuBar from "./MenuBar.vue";
 export default {
   name: "HelloWorld",
+  components: { MenuBar },
+  // beforeCreate() {
+  //   console.log("beforeCreate");
+  //   console.log("Título ", this.titulo);
+  //   console.log("EL ", this.$el);
+  // },
+  // created() {
+  //   console.log("created");
+  //   console.log("Título ", this.titulo);
+  //   console.log("EL ", this.$el);
+  // },
+  // beforeMount() {
+  //   console.log("beforeMount");
+  //   console.log("Título ", this.titulo);
+  //   console.log("EL ", this.$el);
+  // },
+  // mounted() {
+  //   console.log("mounted");
+  //   console.log("Título ", this.titulo);
+  //   console.log("EL ", this.$el);
+  // },
+  // beforeUpdate() {
+  //   console.log("beforeUpdate");
+  // },
+  // updated() {
+  //   console.log("updated");
+  // },
   data: () => ({
     titulo: "Vue Js do Jeito Ninja",
     //texto: false, //texto: true
