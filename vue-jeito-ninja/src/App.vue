@@ -1,19 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <br />
+    <transition name="fade">
+      <transformers-component></transformers-component>
+    </transition>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TransformersComponent from "./components/TransformersComponent.vue";
+// import AjaxComponent from './components/AjaxComponent.vue'
+//import AxiosComponent from "./components/AxiosComponent.vue";
+// import CardComponent from "./components/CardComponent.vue";
+// import CardForm from './components/CardForm.vue'
+// import ListComponent from './components/ListComponent.vue'
 
 export default {
-  name: 'App',
+  name: "App",
+  data: () => ({
+    movie: "transformers",
+  }),
   components: {
-    HelloWorld
-  }
-}
+    TransformersComponent,
+  },
+};
 </script>
 
 <style>
@@ -24,5 +35,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.v-enter-active .v-leave-active {
+  transition: opacity 0.5s;
+}
+
+.v-enter .v-leave-to {
+  opacity: 0;
 }
 </style>

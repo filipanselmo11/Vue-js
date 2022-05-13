@@ -2,10 +2,11 @@
   <div>
     <h1>{{ titulo }}</h1>
     {{ nome }}
-    <nav-bar>
-      <menubar></menubar>
-    </nav-bar>
-    
+    <nav-bar> </nav-bar>
+
+    <br />
+    <menubar :items="[{ label: 'empresa' }, { label: 'serviços' }]"></menubar>
+
     <!-- {{ fullName }} -->
     <!-- <ul>
       <li v-for="(index, usuario) in usuarios" :key="index">
@@ -70,7 +71,7 @@
 
 <script>
 import MenuBar from "./MenuBar.vue";
-import NavBar from './NavBar.vue';
+import NavBar from "./NavBar.vue";
 export default {
   name: "HelloWorld",
   components: { MenuBar, NavBar },
