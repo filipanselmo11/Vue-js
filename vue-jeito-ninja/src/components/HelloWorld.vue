@@ -1,9 +1,16 @@
 <template>
   <div>
     <h1>{{ titulo }}</h1>
-    <form action="https://google.com">
+    {{ nome }}
+    {{ fullName }}
+    <!-- <ul>
+      <li v-for="(index, usuario) in usuarios" :key="index">
+        {{ usuario.nome | toUpperCase() }}
+      </li>
+    </ul> -->
+    <!-- <form action="https://google.com">
       <button @click.prevent.stop="enviar">Enviar</button>
-    </form>
+    </form> -->
     <!-- <button :class="btnLimpar" :style="btnStyleLimpar">LIMPar</button>
     <button :class="btnEnviar">ENVIAR</button> -->
     <!-- <img :src="imagem" :alt="alt" />
@@ -75,7 +82,9 @@ export default {
       { nome: "JavaZao" },
       { nome: "Python" },
     ],
-    nome: "",
+    firstName: "",
+    lastName: "",
+    // fullName: "",
     telefone: "",
     novidades: "",
     interesses: [],
@@ -94,11 +103,45 @@ export default {
       { "font-weight": "bold" },
       { "text-transform": "lowercase" },
     ],
+    usuarios: [
+      { nome: "Jon Snow" },
+      { nome: "Fílip Anselmo" },
+      { nome: "Ronin Yoshimitsu" },
+    ],
   }),
+  filters: {
+    toUpperCase(str) {
+      return str.toUpperCase();
+    },
+    truncate(str) {
+      return str.substring(0, 10);
+    },
+  },
   methods: {
     enviar() {
       alert("Enviado");
     },
+    updateUser() {
+      console.log("Usuário Atualizado");
+    },
+  },
+  computed: {
+    fullName() {
+      return this.firstName + " " + this.lastName;
+    },
+  },
+  watch: {
+    firstName(value) {
+      if (value) {
+        this.updateUser();
+      }
+    },
+    // firstName(newValue){
+    //   this.fullName = newValue + ' ' +  this.lastName;
+    // },
+    // lasrtName(newValue){
+    //   this.fullName = this.firstName + ' ' + newValue;
+    // }
   },
 };
 </script>
