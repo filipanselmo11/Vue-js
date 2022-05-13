@@ -2,7 +2,10 @@
   <div>
     <h1>{{ titulo }}</h1>
     {{ nome }}
-    <menubar></menubar>
+    <nav-bar>
+      <menubar></menubar>
+    </nav-bar>
+    
     <!-- {{ fullName }} -->
     <!-- <ul>
       <li v-for="(index, usuario) in usuarios" :key="index">
@@ -67,9 +70,10 @@
 
 <script>
 import MenuBar from "./MenuBar.vue";
+import NavBar from './NavBar.vue';
 export default {
   name: "HelloWorld",
-  components: { MenuBar },
+  components: { MenuBar, NavBar },
   // beforeCreate() {
   //   console.log("beforeCreate");
   //   console.log("Título ", this.titulo);
