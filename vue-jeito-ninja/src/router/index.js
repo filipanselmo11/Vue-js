@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', name: 'home', redrect: '' },
+    { path: '/', name: 'home', redrect: { name: 'transformers-content', params: { name: 'optimus-prime' } } },
     {
         path: '/transformers',
         name: 'transformers',
