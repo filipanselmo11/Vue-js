@@ -4,7 +4,14 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/transformers', name: 'transformers', component: () => import('../components/TransformersComponent.vue') },
+    {
+        path: '/transformers',
+        name: 'transformers',
+        component: () => import('../components/TransformersComponent.vue'),
+        children: [
+            { path: ':name', name: 'transformers-content', component: () => import('../components/TransformersContentComponent.vue') }
+        ],
+    },
     { path: '/game-of-thrones', name: 'game-of-thrones', component: () => import('../components/GotComponent.vue') },
 ];
 
