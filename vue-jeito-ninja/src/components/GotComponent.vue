@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "Got",
+  name: "GotComponent",
   data: () => ({
     lista: [
       { nome: "Aria Stark" },

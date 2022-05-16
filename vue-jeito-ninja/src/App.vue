@@ -2,14 +2,16 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <br />
+    <router-link :to="{name: 'transformers'}">Transformers</router-link>
+    <router-link :to="{name: 'game-of-thrones'}">GOT</router-link>
     <transition name="fade">
-      <transformers-component></transformers-component>
+      <router-view></router-view>
     </transition>
   </div>
 </template>
 
 <script>
-import TransformersComponent from "./components/TransformersComponent.vue";
+// import TransformersComponent from "./components/TransformersComponent.vue";
 // import AjaxComponent from './components/AjaxComponent.vue'
 //import AxiosComponent from "./components/AxiosComponent.vue";
 // import CardComponent from "./components/CardComponent.vue";
@@ -21,9 +23,6 @@ export default {
   data: () => ({
     movie: "transformers",
   }),
-  components: {
-    TransformersComponent,
-  },
 };
 </script>
 
