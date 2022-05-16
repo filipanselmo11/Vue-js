@@ -9,6 +9,7 @@ const routes = [
         path: '/transformers',
         name: 'transformers',
         component: () => import('../components/TransformersComponent.vue'),
+        props: { sidebar: false },
         children: [
             { path: ':name', name: 'transformers-content', component: () => import('../components/TransformersContentComponent.vue') }
         ],

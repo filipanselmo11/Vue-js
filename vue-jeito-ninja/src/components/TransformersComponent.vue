@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="row">
+    <div v-if="sidebar" class="col">
+      Sidebar
+    </div>
       <div class="col">
         <h4>Transformes</h4>
         <ul class="list-groups">
@@ -22,9 +25,15 @@
 <script>
 export default {
   name: "TransformersComponent",
+  props: {
+    sidebar: Boolean,
+  },
+  created() {
+    console.log(this.sidebar);
+  },
   data: () => ({
     lista: [
-      { nome: "Optimus Prime", slug: "optimus-prime" },
+      { nome: 'Optimus Prime', slug: "optimus-prime" },
       { nome: "Megatron", slug: "megatron" },
       { nome: "IronHide", slug: "ironhide" },
       { nome: "StarScream", slug: "star-scream" },
