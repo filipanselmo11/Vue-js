@@ -2,8 +2,8 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <br />
-    <router-link :to="{name: 'transformers'}">Transformers</router-link>
-    <router-link :to="{name: 'game-of-thrones'}">GOT</router-link>
+    <router-link :to="{ name: 'transformers' }">Transformers</router-link>
+    <router-link :to="{ name: 'game-of-thrones' }">GOT</router-link>
     <transition name="fade">
       <router-view></router-view>
     </transition>
@@ -23,6 +23,9 @@ export default {
   data: () => ({
     movie: "transformers",
   }),
+  created() {
+    this.$router.push({ name: 'transformers-content', params: { name: 'megatron' } });
+  },
 };
 </script>
 

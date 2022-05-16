@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [
+    { path: '/', name: 'home', redrect: '' },
     {
         path: '/transformers',
         name: 'transformers',
@@ -13,6 +14,7 @@ const routes = [
         ],
     },
     { path: '/game-of-thrones', name: 'game-of-thrones', component: () => import('../components/GotComponent.vue') },
+    { path: '*', name: 'error-404', component: 'error404' }
 ];
 
 
