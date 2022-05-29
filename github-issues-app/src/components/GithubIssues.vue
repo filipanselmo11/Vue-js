@@ -20,18 +20,28 @@
     <v-data-table
       dense
       :headers="headers"
+      :items="issues"
       item-key="name"
       class="elevation-1"
-    ></v-data-table>
+    >
+      <template slot="items">
+        <tr v-for="(issue,index) in issues" :key="index">
+          <td>{{issue.number}}</td>
+          <td>{{issue.title}}</td>
+        </tr>
+      </template>
+    </v-data-table>
   </v-container>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "GithubIssues",
   data: () => ({
     name: undefined,
     repo: undefined,
+    issues:[],
     headers: [{ text: "Número" }, { text: "Título" }],
   }),
   methods: {
@@ -41,7 +51,18 @@ export default {
       console.log("Resetados com Sucesso");
     },
     getIssues() {
-      console.log("FUNFANDO");
+      if (this.name && this.repo) {
+        const url = `https://api.github.com/repos/${this.name}/${this.repo}/issues`;
+        axios
+          .get(url)
+          .then((response) => {
+            console.log("RES ", response.data);
+            this.issues = response.data;
+          })
+          .catch((e) => { console.log("ERROR ", e)});
+      } else {
+        console.log('É necessário preencher os dois campos');
+      }
     },
   },
 };
