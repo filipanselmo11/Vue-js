@@ -1,4 +1,4 @@
-# vuetify-tutorial
+# vuetify-app
 
 ## Project setup
 ```
