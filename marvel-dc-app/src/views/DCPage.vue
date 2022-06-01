@@ -3,7 +3,6 @@
     <h1 class="ml-6">DC Comics</h1>
     <br /><br />
     <v-container>
-      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
       <v-row>
         <v-col cols="6" md="4">
           <card-batman></card-batman>
@@ -30,30 +29,68 @@
           <card-kid-flash></card-kid-flash>
         </v-col>
         <v-col cols="6" md="4">
-            <card-bane></card-bane>
+          <card-bane></card-bane>
         </v-col>
         <v-col cols="6" md="4">
-            <card-mulher-leopardo></card-mulher-leopardo>
+          <card-mulher-leopardo></card-mulher-leopardo>
         </v-col>
-        <v-col cols="6" md="4"> Sinestro </v-col>
-        <v-col cols="6" md="4"> Lanterna Verde </v-col>
-        <v-col cols="6" md="4"> Arqueiro Verde </v-col>
-        <v-col cols="6" md="4"> Capuz Vermelho </v-col>
-        <v-col cols="6" md="4"> Robin </v-col>
-        <v-col cols="6" md="4"> Super Boy </v-col>
-        <v-col cols="6" md="4"> Katana </v-col>
-        <v-col cols="6" md="4"> Harlequina </v-col>
-        <v-col cols="6" md="4"> Mulher Gato </v-col>
-        <v-col cols="6" md="4"> Batman que Ri </v-col>
-        <v-col cols="6" md="4"> Impulso </v-col>
-        <v-col cols="6" md="4"> Super Choque </v-col>
-        <v-col cols="6" md="4"> Raio Negro </v-col>
-        <v-col cols="6" md="4"> Apocalipse </v-col>
-        <v-col cols="6" md="4"> Crocodilo </v-col>
-        <v-col cols="6" md="4"> Zody </v-col>
-        <v-col cols="6" md="4"> Lobo da Estepe </v-col>
-        <v-col cols="6" md="4"> Darkseid </v-col>
-        <v-col cols="6" md="4"> Amanda Waller </v-col>
+        <v-col cols="6" md="4">
+          <card-sinestro></card-sinestro>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-lanterna-verde></card-lanterna-verde>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-arqueiro-verde></card-arqueiro-verde>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-capuz-vermelho></card-capuz-vermelho>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-robin></card-robin>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-super-boy></card-super-boy>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-katana></card-katana>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-harleyquina></card-harleyquina>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-mulher-gato></card-mulher-gato>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-batman-que-ri></card-batman-que-ri>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-impulso></card-impulso>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-super-choque></card-super-choque>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-raio-negro></card-raio-negro>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-apocalipse></card-apocalipse>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-crocodilo></card-crocodilo>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-zod></card-zod>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-lobo-da-estepe></card-lobo-da-estepe>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-darkseid></card-darkseid>
+        </v-col>
+        <v-col cols="6" md="4">
+          <card-amanda-waller></card-amanda-waller>
+        </v-col>
         <v-col cols="6" md="4"> Robin Vermelho </v-col>
         <v-col cols="6" md="4"> Mutano </v-col>
         <v-col cols="6" md="4"> Ravena </v-col>
@@ -75,8 +112,27 @@ import CardExterminador from "@/components/dc/CardExterminador.vue";
 import CardFlashReverso from "@/components/dc/CardFlashReverso.vue";
 import CardLexLuthor from "@/components/dc/CardLexLuthor.vue";
 import CardKidFlash from "@/components/dc/CardKidFlash.vue";
-import CardBane from '@/components/dc/CardBane.vue';
-import CardMulherLeopardo from '@/components/dc/CardMulherLeopardo.vue';
+import CardBane from "@/components/dc/CardBane.vue";
+import CardMulherLeopardo from "@/components/dc/CardMulherLeopardo.vue";
+import CardSinestro from "@/components/dc/CardSinestro.vue";
+import CardLanternaVerde from "@/components/dc/CardLanternaVerde.vue";
+import CardArqueiroVerde from "@/components/dc/CardArqueiroVerde.vue";
+import CardCapuzVermelho from "@/components/dc/CardCapuzVermelho.vue";
+import CardRobin from "@/components/dc/CardRobin.vue";
+import CardSuperBoy from "@/components/dc/CardSuperBoy.vue";
+import CardKatana from "@/components/dc/CardKatana.vue";
+import CardHarleyquina from "@/components/dc/CardHarleyquina.vue";
+import CardMulherGato from "@/components/dc/CardMulherGato.vue";
+import CardBatmanQueRi from "@/components/dc/CardBatmanQueRi.vue";
+import CardImpulso from "@/components/dc/CardImpulso.vue";
+import CardSuperChoque from "@/components/dc/CardSuperChoque.vue";
+import CardRaioNegro from "@/components/dc/CardRaioNegro.vue";
+import CardApocalipse from "@/components/dc/CardApocalipse.vue";
+import CardCrocodilo from "@/components/dc/CardCrocodilo.vue";
+import CardZod from "@/components/dc/CardZod.vue";
+import CardLoboDaEstepe from "@/components/dc/CardLoboDaEstepe.vue";
+import CardDarkseid from "@/components/dc/CardDarkseid.vue";
+import CardAmandaWaller from '@/components/dc/CardAmandaWaller.vue';
 export default {
   components: {
     CardBatman,
@@ -88,7 +144,26 @@ export default {
     CardLexLuthor,
     CardKidFlash,
     CardBane,
-    CardMulherLeopardo
+    CardMulherLeopardo,
+    CardSinestro,
+    CardLanternaVerde,
+    CardArqueiroVerde,
+    CardCapuzVermelho,
+    CardRobin,
+    CardSuperBoy,
+    CardKatana,
+    CardHarleyquina,
+    CardMulherGato,
+    CardBatmanQueRi,
+    CardImpulso,
+    CardSuperChoque,
+    CardRaioNegro,
+    CardApocalipse,
+    CardCrocodilo,
+    CardZod,
+    CardLoboDaEstepe,
+    CardDarkseid,
+    CardAmandaWaller,
   },
   name: "DCPage",
   data: () => ({}),
