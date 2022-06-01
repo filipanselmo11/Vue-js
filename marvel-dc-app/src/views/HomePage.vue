@@ -3,9 +3,9 @@
     <div>
       <v-card class="mx-auto" max-width="344">
         <v-img src="../assets/dc.jpg" height="200px"></v-img>
-        <v-card-title>DC</v-card-title>
+        <v-card-title class="font-weight-medium">DC</v-card-title>
         <v-card-actions>
-          <v-btn text to="/dc">Entrar</v-btn>
+          <v-btn :class="this.$vuetify.theme.themes.dark.primary.lighten1" text to="/dc">Entrar</v-btn>
         </v-card-actions>
       </v-card>
     </div>
@@ -17,9 +17,9 @@
     <div>
       <v-card class="mx-auto" max-width="344">
         <v-img src="../assets/marvel.jpg" height="200px"></v-img>
-        <v-card-title>Marvel</v-card-title>
+        <v-card-title class="font-weight-medium">Marvel</v-card-title>
         <v-card-actions>
-          <v-btn text class="" to="/marvel">Entrar</v-btn>
+          <v-btn text to="/marvel">Entrar</v-btn>
         </v-card-actions>
       </v-card>
     </div>
