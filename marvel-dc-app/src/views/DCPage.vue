@@ -4,100 +4,100 @@
     <br /><br />
     <v-container>
       <v-row>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-batman></card-batman>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-flash></card-flash>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-superman></card-superman>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-mulher-maravilha></card-mulher-maravilha>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-exterminador></card-exterminador>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-flash-reverso></card-flash-reverso>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-lex-luthor></card-lex-luthor>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-kid-flash></card-kid-flash>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-bane></card-bane>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-mulher-leopardo></card-mulher-leopardo>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-sinestro></card-sinestro>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-lanterna-verde></card-lanterna-verde>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-arqueiro-verde></card-arqueiro-verde>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-capuz-vermelho></card-capuz-vermelho>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-robin></card-robin>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-super-boy></card-super-boy>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-katana></card-katana>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-harleyquina></card-harleyquina>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-mulher-gato></card-mulher-gato>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-batman-que-ri></card-batman-que-ri>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-impulso></card-impulso>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-super-choque></card-super-choque>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-raio-negro></card-raio-negro>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-apocalipse></card-apocalipse>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-crocodilo></card-crocodilo>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-zod></card-zod>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-lobo-da-estepe></card-lobo-da-estepe>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-darkseid></card-darkseid>
         </v-col>
-        <v-col cols="6" md="4">
+        <v-col cols="12" md="4">
           <card-amanda-waller></card-amanda-waller>
         </v-col>
-        <v-col cols="6" md="4"> Robin Vermelho </v-col>
-        <v-col cols="6" md="4"> Mutano </v-col>
-        <v-col cols="6" md="4"> Ravena </v-col>
-        <v-col cols="6" md="4"> Ras Al Gul </v-col>
-        <v-col cols="6" md="4"> Hugo Strange </v-col>
-        <v-col cols="6" md="4"> John Constantine </v-col>
-        <v-col cols="6" md="4"> Shazam </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> Robin Vermelho </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> Mutano </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> Ravena </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> Ras Al Gul </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> Hugo Strange </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> John Constantine </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6"> Shazam </v-col>
       </v-row>
     </v-container>
   </div>

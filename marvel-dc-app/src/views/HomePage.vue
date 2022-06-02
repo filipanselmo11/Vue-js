@@ -5,7 +5,7 @@
         <v-img src="../assets/dc.jpg" height="200px"></v-img>
         <v-card-title class="font-weight-medium">DC</v-card-title>
         <v-card-actions>
-          <v-btn :class="this.$vuetify.theme.themes.dark.primary.lighten1" text to="/dc">Entrar</v-btn>
+          <v-btn text to="/dc">Entrar</v-btn>
         </v-card-actions>
       </v-card>
     </div>
