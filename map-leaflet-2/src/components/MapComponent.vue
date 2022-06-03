@@ -7,8 +7,8 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 export default {
   name: "MapComponent",
-  data:() => ({
-      map: undefined,
+  data: () => ({
+    map: undefined,
   }),
   mounted() {
     this.setupMap();
@@ -16,7 +16,7 @@ export default {
   methods: {
     setupMap() {
       this.map = L.map("map").setView([-0.11533291437044707, -67.09336742717267], 13);
-    this.map.on('click', this.onMapClick)
+      this.map.on("click", this.onMapClick);
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap",
@@ -30,7 +30,7 @@ export default {
       }).addTo(this.map);
       const circle_2 = L.circle([-0.12387304909303351, -67.07349762351372], {
         color: "red",
-        fillColor: "#f03",
+        fillColor: "blue",
         fillOpacity: 0.5,
         radius: 500,
       }).addTo(this.map);
@@ -42,7 +42,9 @@ export default {
       const polygon_2 = L.polygon([
         [-0.10905748699994758, -67.09059960593775], //Galpão do Forró
         [-0.11186843677431559, -67.07982785488157], //Escola Estadual Sagrada Família,
-        [-0.1211017312426321, -67.09073828637412], //Hospital de Guarnição de São Gabriel da Cachoeira
+        [-0.1211017312426321, -67.09073828637412][
+          (-0.1260441574585611, -67.07351035341756)
+        ],
       ]).addTo(this.map);
       circle_1.bindPopup("Olá eu sou o circulo1");
       circle_2.bindPopup("Olá eu sou o circulo1");
