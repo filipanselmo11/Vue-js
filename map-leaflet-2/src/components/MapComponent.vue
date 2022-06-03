@@ -42,9 +42,8 @@ export default {
       const polygon_2 = L.polygon([
         [-0.10905748699994758, -67.09059960593775], //Galpão do Forró
         [-0.11186843677431559, -67.07982785488157], //Escola Estadual Sagrada Família,
-        [-0.1211017312426321, -67.09073828637412][
-          (-0.1260441574585611, -67.07351035341756)
-        ],
+        [-0.1211017312426321, -67.09073828637412],
+        [-0.1260441574585611, -67.07351035341756],
       ]).addTo(this.map);
       circle_1.bindPopup("Olá eu sou o circulo1");
       circle_2.bindPopup("Olá eu sou o circulo1");
