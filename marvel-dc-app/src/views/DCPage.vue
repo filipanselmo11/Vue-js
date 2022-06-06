@@ -88,16 +88,30 @@
         <v-col cols="12" md="6" lg="6" xl="6">
           <card-darkseid></card-darkseid>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="6" lg="6" xl="6">
           <card-amanda-waller></card-amanda-waller>
         </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> Robin Vermelho </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> Mutano </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> Ravena </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> Ras Al Gul </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> Hugo Strange </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> John Constantine </v-col>
-        <v-col  cols="12" md="6" lg="6" xl="6"> Shazam </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-robin-vermelho></card-robin-vermelho>
+        </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-mutano></card-mutano>
+        </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-ravena></card-ravena>
+        </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-ras></card-ras>
+        </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-hugo-strange></card-hugo-strange>
+        </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-john-constatine></card-john-constatine>
+        </v-col>
+        <v-col  cols="12" md="6" lg="6" xl="6">
+          <card-shazam></card-shazam>
+        </v-col>
       </v-row>
     </v-container>
   </div>
@@ -133,6 +147,13 @@ import CardZod from "@/components/dc/CardZod.vue";
 import CardLoboDaEstepe from "@/components/dc/CardLoboDaEstepe.vue";
 import CardDarkseid from "@/components/dc/CardDarkseid.vue";
 import CardAmandaWaller from '@/components/dc/CardAmandaWaller.vue';
+import CardRobinVermelho from '@/components/dc/CardRobinVermelho.vue';
+import CardMutano from '@/components/dc/CardMutano.vue';
+import CardRavena from '@/components/dc/CardRavena.vue';
+import CardRas from '@/components/dc/CardRas.vue';
+import CardHugoStrange from '@/components/dc/CardHugoStrange.vue';
+import CardJohnConstatine from '@/components/dc/CardJohnConstatine.vue';
+import CardShazam from '@/components/dc/CardShazam.vue';
 export default {
   components: {
     CardBatman,
@@ -164,6 +185,13 @@ export default {
     CardLoboDaEstepe,
     CardDarkseid,
     CardAmandaWaller,
+    CardRobinVermelho,
+    CardMutano,
+    CardRavena,
+    CardRas,
+    CardHugoStrange,
+    CardJohnConstatine,
+    CardShazam
   },
   name: "DCPage",
   data: () => ({}),
